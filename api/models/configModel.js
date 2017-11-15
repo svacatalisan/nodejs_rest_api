@@ -3,10 +3,10 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 
-const TaskSchema = new Schema({
+const ConfigSchema = new Schema({
     name: {
-        type: String,
-        required: 'Kindly enter the name of the task'
+        type: Object,
+        required: 'Kindly enter the name of the config'
     },
     value: {
         type: String,
@@ -25,4 +25,4 @@ const TaskSchema = new Schema({
     }
 });
 
-module.exports = mongoose.model('Tasks', TaskSchema);
+module.exports = mongoose.model('Configs', ConfigSchema);
